@@ -1,2 +1,0 @@
-0.54s     4154  http://gopl.io
-0.54s elapsed

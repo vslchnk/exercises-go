@@ -1,7 +1,0 @@
-check
-test check
-check test
-test test
-check check test
-chek
-tet 
