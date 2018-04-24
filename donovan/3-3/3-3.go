@@ -78,7 +78,7 @@ func corner(i, j, width, height int, xyscale, zscale float64) (float64, float64,
 
 	// Compute surface height z.
 	z := f(x, y)
-	colLevel := math.Abs(z) * 1000
+	colLevel := math.Abs(z)*1000 + 20
 	if colLevel > 255 {
 		colLevel = 255
 	}
@@ -98,9 +98,8 @@ func corner(i, j, width, height int, xyscale, zscale float64) (float64, float64,
 
 func f(x, y float64) float64 {
 	r := math.Hypot(x, y) // distance from (0,0)
-	if r != 0 {
-		return math.Sin(r) / r
-	} else {
-		return 0
+	if r < 0.0001 {
+		r = 0.0001
 	}
+	return math.Sin(r) / r
 }
