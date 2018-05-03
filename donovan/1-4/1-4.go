@@ -37,8 +37,4 @@ func countLines(f *os.File, counts map[string]string, fileName string) {
 	for input.Scan() {
 		counts[input.Text()] += fileName + sep
 	}
-
-	//counts[input.Text()] = strings.TrimSuffix(counts[input.Text()], " ")
-	// not working
-	// NOTE: ignoring potential errors from input.Err()
 }

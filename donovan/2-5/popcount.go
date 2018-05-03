@@ -5,7 +5,7 @@ import "fmt"
 func PopCount(x uint64) int {
 	c := 0
 	for x != 0 {
-		x = x & (x - 1) // clear rightmost non-zero bit
+		x = x & (x - 1)
 		c++
 	}
 	return c
